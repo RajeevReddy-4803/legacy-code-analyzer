@@ -10,7 +10,7 @@ This project currently targets the **ERPNext Sales Invoice** module, a critical 
 
 ## 💼 Strategic Value
 *   **Risk Mitigation**: Identifies critical validation logic before it becomes a migration failure point.
-*   **Accelerated Modernization**: Reduces discovery time by 40% through automated entity extraction.
+*   **Accelerated Modernization**: Reduces discovery time by significantly shortening manual code exploration.
 *   **Compliance Assurance**: Maps hard-coded tax and billing rules to ensure regulatory alignment.
 
 ## 🛠️ Key Capabilities
