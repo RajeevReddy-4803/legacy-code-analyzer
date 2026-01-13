@@ -35,4 +35,6 @@ if __name__ == "__main__":
     with open("output/entities.json", "w") as f:
         json.dump(result, f, indent=2)
 
-    print("Analysis complete. Output written to output/entities.json")
+    print("Legacy module analysis complete.")
+    print(f"Files analyzed: {len(results)}")
+    print("Output written to output/entities.json")
