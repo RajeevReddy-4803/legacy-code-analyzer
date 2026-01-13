@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Analyzer: Sales Invoice",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/analyzer.py",
+            "console": "integratedTerminal",
+            "args": [
+                "erpnext/erpnext/accounts/doctype/sales_invoice/"
+            ]
+        }
+    ]
+}

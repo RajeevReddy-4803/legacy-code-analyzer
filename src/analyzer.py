@@ -4,8 +4,7 @@ import json
 import sys
 
 def analyze(path):
-    classes = set()
-    functions = set()
+    results = {}
 
     for root, _, files in os.walk(path):
         for file in files:
@@ -15,15 +14,18 @@ def analyze(path):
                     with open(full_path, "r", encoding="utf-8", errors="ignore") as f:
                         content = f.read()
 
-                        classes.update(re.findall(r"class (\w+)", content))
-                        functions.update(re.findall(r"def (\w+)\(", content))
+                        classes = re.findall(r"class (\w+)", content)
+                        functions = re.findall(r"def (\w+)\(", content)
+
+                        if classes or functions:
+                            results[full_path] = {
+                                "classes": classes,
+                                "functions": functions
+                            }
                 except:
                     pass
 
-    return {
-        "classes": list(classes),
-        "functions": list(functions)
-    }
+    return results
 
 if __name__ == "__main__":
     target = sys.argv[1] if len(sys.argv) > 1 else "."
